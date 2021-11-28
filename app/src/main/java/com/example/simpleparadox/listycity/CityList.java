@@ -48,5 +48,14 @@ public class CityList {
         Collections.sort(list);
         return list;
     }
+    
+    /**
+     * This returns a number of cities
+     * @return
+     *      Return the total sum of city number
+     */
+    public int getCount() {
+        return cities.size();
+    }
 
 }
