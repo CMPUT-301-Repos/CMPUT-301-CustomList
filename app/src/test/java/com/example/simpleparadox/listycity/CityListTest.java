@@ -79,5 +79,20 @@ class CityListTest {
             cityList.delete(city);
         });
     }
+     @Test
+    void testGetCount()
+    {
+        CityList cityList = mockCityList();
+
+        assertEquals(0, cityList.getCount());
+
+        City city = new City("Charlottetown", "Prince Edward Island");
+        cityList.add(city);
+        assertEquals(1, cityList.getCount());
+
+        City city2 = new City("Yellowknife", "Northwest Territories");
+        cityList.add(city2);
+        assertEquals(2, cityList.getCount());
+    }
 
 }
